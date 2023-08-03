@@ -53,7 +53,7 @@ class dfAnonymizer(object):
     def __init__(self,
                  df: pd.DataFrame):
 
-        if df.__class__.__name__ != "DataFrame":
+        if not isinstance(df, pd.DataFrame):
             raise Exception(f"{df} is not a pandas DataFrame.")
 
         # Private Attributes
